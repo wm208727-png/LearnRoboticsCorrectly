@@ -1,0 +1,917 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>LEARN ROBOTICS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    background:#0f172a;
+    color:#e5e7eb;
+}
+header{
+    background:#020617;
+    padding:25px;
+    text-align:center;
+}
+header h1{
+    color:#38bdf8;
+    margin:0;
+}
+header p{
+    color:#cbd5f5;
+}
+section{
+    max-width:1000px;
+    margin:auto;
+    padding:20px;
+}
+h2{
+    color:#22d3ee;
+    border-bottom:2px solid #334155;
+    padding-bottom:8px;
+}
+details{
+    background:#020617;
+    margin:10px 0;
+    padding:15px;
+    border-radius:10px;
+    border:1px solid #334155;
+}
+summary{
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    color:#f8fafc;
+}
+pre{
+    background:#020617;
+    padding:15px;
+    border-radius:8px;
+    overflow-x:auto;
+    color:#a7f3d0;
+}
+footer{
+    text-align:center;
+    padding:20px;
+    background:#020617;
+    color:#94a3b8;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>🤖 LEARN ROBOTICS</h1>
+    <p>Complete Robotics Learning Platform – Lessons & Arduino Projects</p>
+</header>
+
+<section>
+<h2>📘 ROBOTICS LESSONS (15)</h2>
+
+<details>
+<summary>Lesson 1: Introduction to Robotics</summary>
+<p>Robotics is a branch of science and engineering that involves designing, building, and programming robots.</p>
+<ul>
+<li>What is a Robot?</li>
+<li>History of Robotics</li>
+<li>Applications of Robots</li>
+</ul>
+</details>
+
+<details>
+<summary>Lesson 2: Types of Robots</summary>
+<ul>
+<li>Industrial Robots</li>
+<li>Service Robots</li>
+<li>Medical Robots</li>
+<li>Humanoid Robots</li>
+</ul>
+</details>
+
+<details>
+<summary>Lesson 3: Basic Robot Components</summary>
+<ul>
+<li>Controller (Microcontroller)</li>
+<li>Sensors</li>
+<li>Actuators (Motors)</li>
+<li>Power Supply</li>
+</ul>
+</details>
+
+<details>
+<summary>Lesson 4: Introduction to Arduino</summary>
+<p>Arduino is an open-source electronics platform used to build robotics projects.</p>
+<ul>
+<li>Arduino UNO</li>
+<li>Arduino IDE</li>
+<li>Uploading Code</li>
+</ul>
+</details>
+
+<details>
+<summary>Lesson 5: Programming Basics</summary>
+<ul>
+<li>Variables</li>
+<li>Loops</li>
+<li>Conditions</li>
+<li>Functions</li>
+</ul>
+</details>
+
+<details>
+<summary>Lesson 6: Digital & Analog Signals</summary>
+<ul>
+<li>Digital HIGH & LOW</li>
+<li>Analog Values (0–1023)</li>
+</ul>
+</details>
+
+<details>
+<summary>Lesson 7: Sensors in Robotics</summary>
+<ul>
+<li>IR Sensor</li>
+<li>Ultrasonic Sensor</li>
+<li>Temperature Sensor</li>
+</ul>
+</details>
+
+<details>
+<summary>Lesson 8: Motors & Motor Drivers</summary>
+<ul>
+<li>DC Motors</li>
+<li>Servo Motors</li>
+<li>L298N Motor Driver</li>
+</ul>
+</details>
+
+<details>
+<summary>Lesson 9: Power Systems</summary>
+<ul>
+<li>Batteries</li>
+<li>Voltage Regulation</li>
+</ul>
+</details>
+
+<details>
+<summary>Lesson 10: Communication Modules</summary>
+<ul>
+<li>Bluetooth</li>
+<li>WiFi</li>
+<li>RF</li>
+</ul>
+</details>
+
+<details>
+<summary>Lesson 11: Line Following Robots</summary>
+<p>Robots that follow a predefined line using sensors.</p>
+</details>
+
+<details>
+<summary>Lesson 12: Obstacle Avoiding Robots</summary>
+<p>Robots that detect and avoid obstacles automatically.</p>
+</details>
+
+<details>
+<summary>Lesson 13: Robotic Arms</summary>
+<ul>
+<li>Degrees of Freedom</li>
+<li>Servo Control</li>
+</ul>
+</details>
+
+<details>
+<summary>Lesson 14: AI in Robotics</summary>
+<ul>
+<li>Machine Learning</li>
+<li>Computer Vision</li>
+</ul>
+</details>
+
+<details>
+<summary>Lesson 15: Future of Robotics</summary>
+<p>Robotics will play a major role in healthcare, space, and daily life.</p>
+</details>
+</section>
+
+<section>
+<h2>🛠 ARDUINO PROJECTS (19)</h2>
+
+<details>
+<summary>Project 1: LED Blinking</summary>
+<p>This project teaches basic Arduino programming.</p>
+<pre>
+void setup(){
+  pinMode(13, OUTPUT);
+}
+void loop(){
+  digitalWrite(13, HIGH);
+  delay(1000);
+  digitalWrite(13, LOW);
+  delay(1000);
+}
+</pre>
+</details>
+
+<details>
+<summary>Project 2: Traffic Light System</summary>
+<pre>
+void setup(){
+ pinMode(2,OUTPUT);
+ pinMode(3,OUTPUT);
+ pinMode(4,OUTPUT);
+}
+void loop(){
+ digitalWrite(2,HIGH);
+ delay(3000);
+ digitalWrite(2,LOW);
+ digitalWrite(3,HIGH);
+ delay(2000);
+ digitalWrite(3,LOW);
+ digitalWrite(4,HIGH);
+ delay(3000);
+ digitalWrite(4,LOW);
+}
+</pre>
+</details>
+
+<details>
+<summary>Project 3: Push Button LED</summary>
+<pre>
+int button=7;
+int led=13;
+void setup(){
+ pinMode(button,INPUT);
+ pinMode(led,OUTPUT);
+}
+void loop(){
+ if(digitalRead(button)==HIGH){
+  digitalWrite(led,HIGH);
+ }else{
+  digitalWrite(led,LOW);
+ }
+}
+</pre>
+</details>
+
+<details>
+<summary>Project 4: Buzzer Alarm</summary>
+<pre>
+int buzzer=8;
+void setup(){
+ pinMode(buzzer,OUTPUT);
+}
+void loop(){
+ digitalWrite(buzzer,HIGH);
+ delay(500);
+ digitalWrite(buzzer,LOW);
+ delay(500);
+}
+</pre>
+</details>
+
+<details>
+<summary>Project 5: Ultrasonic Distance Measurement</summary>
+<pre>
+int trig=9;
+int echo=10;
+void setup(){
+ pinMode(trig,OUTPUT);
+ pinMode(echo,INPUT);
+ Serial.begin(9600);
+}
+void loop(){
+ digitalWrite(trig,LOW);
+ delayMicroseconds(2);
+ digitalWrite(trig,HIGH);
+ delayMicroseconds(10);
+ digitalWrite(trig,LOW);
+ long duration=pulseIn(echo,HIGH);
+ long distance=duration*0.034/2;
+ Serial.println(distance);
+ delay(500);
+}
+</pre>
+</details>
+
+<details>
+<summary>Project 6: Obstacle Avoiding Robot</summary>
+<p>Uses ultrasonic sensor to avoid obstacles.</p>
+</details>
+
+<details>
+<summary>Project 7: Line Following Robot</summary>
+<p>Uses IR sensors to follow a black line.</p>
+</details>
+
+<details>
+<summary>Project 8: Servo Motor Control</summary>
+<pre>
+#include <Servo.h>
+Servo myservo;
+void setup(){
+ myservo.attach(9);
+}
+void loop(){
+ myservo.write(0);
+ delay(1000);
+ myservo.write(90);
+ delay(1000);
+ myservo.write(180);
+ delay(1000);
+}
+</pre>
+</details>
+
+<details>
+<summary>Project 9: Bluetooth Controlled Robot</summary>
+<p>Robot controlled using mobile Bluetooth app.</p>
+</details>
+
+<details>
+<summary>Project 10: Smart Dustbin</summary>
+<p>Automatically opens lid when object detected.</p>
+</details>
+
+<details>
+<summary>Project 11: Temperature Monitoring System</summary>
+</details>
+
+<details>
+<summary>Project 12: Home Automation</summary>
+</details>
+
+<details>
+<summary>Project 13: Light Following Robot</summary>
+</details>
+
+<details>
+<summary>Project 14: Voice Controlled Robot</summary>
+</details>
+
+<details>
+<summary>Project 15: Solar Powered Robot</summary>
+</details>
+
+<details>
+<summary>Project 16: RFID Door Lock</summary>
+</details>
+
+<details>
+<summary>Project 17: Smart Parking System</summary>
+</details>
+
+<details>
+<summary>Project 18: Robotic Arm</summary>
+</details>
+
+<details>
+<summary>Project 19: AI Based Robot</summary>
+<p>Uses AI concepts with robotics.</p>
+</details>
+
+</section>
+
+<footer>
+<p>© 2025 LEARN ROBOTICS | Learn • Build • Innovate</p>
+</footer>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>LEARN ROBOTICS – Arduino Projects</title>
+<style>
+body{
+ font-family:Arial, Helvetica, sans-serif;
+ background:#0f172a;
+ color:#e5e7eb;
+ margin:0;
+}
+header{
+ background:#020617;
+ padding:20px;
+ text-align:center;
+}
+h1{color:#38bdf8;}
+section{
+ max-width:1000px;
+ margin:auto;
+ padding:20px;
+}
+details{
+ background:#020617;
+ border:1px solid #334155;
+ border-radius:10px;
+ margin:15px 0;
+ padding:15px;
+}
+summary{
+ font-size:18px;
+ font-weight:bold;
+ cursor:pointer;
+ color:#f8fafc;
+}
+pre{
+ background:#020617;
+ padding:15px;
+ border-radius:8px;
+ overflow-x:auto;
+ color:#a7f3d0;
+}
+footer{
+ text-align:center;
+ padding:15px;
+ background:#020617;
+ color:#94a3b8;
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>🛠 Arduino Projects – Circuit Diagrams & Codes</h1>
+<p>LEARN ROBOTICS – Beginner Friendly</p>
+</header>
+
+<section>
+
+<!-- PROJECT 1 -->
+<details>
+<summary>Project 1: LED Blinking</summary>
+<p><b>Components:</b> Arduino UNO, LED, 220Ω Resistor</p>
+
+<p><b>Circuit Connections:</b></p>
+<pre>
+Arduino 13 ----[220Ω]---->| LED ---- GND
+</pre>
+
+<p><b>Arduino Code:</b></p>
+<pre>
+void setup() {
+ pinMode(13, OUTPUT);
+}
+void loop() {
+ digitalWrite(13, HIGH);
+ delay(1000);
+ digitalWrite(13, LOW);
+ delay(1000);
+}
+</pre>
+</details>
+
+<!-- PROJECT 2 -->
+<details>
+<summary>Project 2: Push Button LED</summary>
+<p><b>Components:</b> Arduino, Button, LED, 10kΩ Resistor</p>
+
+<pre>
+Button:
+ One side -> 5V
+ Other side -> Pin 7 & 10kΩ -> GND
+
+LED:
+ Pin 13 -> 220Ω -> LED -> GND
+</pre>
+
+<pre>
+int button = 7;
+int led = 13;
+
+void setup(){
+ pinMode(button, INPUT);
+ pinMode(led, OUTPUT);
+}
+void loop(){
+ if(digitalRead(button) == HIGH){
+  digitalWrite(led, HIGH);
+ }else{
+  digitalWrite(led, LOW);
+ }
+}
+</pre>
+</details>
+
+<!-- PROJECT 3 -->
+<details>
+<summary>Project 3: Buzzer Alarm</summary>
+<p><b>Components:</b> Arduino, Buzzer</p>
+
+<pre>
+Buzzer + -> Pin 8
+Buzzer - -> GND
+</pre>
+
+<pre>
+int buzzer = 8;
+void setup(){
+ pinMode(buzzer, OUTPUT);
+}
+void loop(){
+ digitalWrite(buzzer, HIGH);
+ delay(500);
+ digitalWrite(buzzer, LOW);
+ delay(500);
+}
+</pre>
+</details>
+
+<!-- PROJECT 4 -->
+<details>
+<summary>Project 4: Traffic Light System</summary>
+<p><b>Components:</b> Arduino, 3 LEDs (Red, Yellow, Green)</p>
+
+<pre>
+Red LED    -> Pin 2 -> 220Ω -> GND
+Yellow LED -> Pin 3 -> 220Ω -> GND
+Green LED  -> Pin 4 -> 220Ω -> GND
+</pre>
+
+<pre>
+void setup(){
+ pinMode(2,OUTPUT);
+ pinMode(3,OUTPUT);
+ pinMode(4,OUTPUT);
+}
+void loop(){
+ digitalWrite(2,HIGH); delay(3000);
+ digitalWrite(2,LOW);
+ digitalWrite(3,HIGH); delay(2000);
+ digitalWrite(3,LOW);
+ digitalWrite(4,HIGH); delay(3000);
+ digitalWrite(4,LOW);
+}
+</pre>
+</details>
+
+<!-- PROJECT 5 -->
+<details>
+<summary>Project 5: Servo Motor Control</summary>
+<p><b>Components:</b> Arduino, Servo Motor</p>
+
+<pre>
+Servo Red   -> 5V
+Servo Brown -> GND
+Servo Yellow-> Pin 9
+</pre>
+
+<pre>
+#include <Servo.h>
+Servo servo;
+
+void setup(){
+ servo.attach(9);
+}
+void loop(){
+ servo.write(0); delay(1000);
+ servo.write(90); delay(1000);
+ servo.write(180); delay(1000);
+}
+</pre>
+</details>
+
+<!-- PROJECT 6 -->
+<details>
+<summary>Project 6: Ultrasonic Distance Sensor</summary>
+<p><b>Components:</b> Arduino, HC-SR04</p>
+
+<pre>
+VCC  -> 5V
+Trig -> Pin 9
+Echo -> Pin 10
+GND  -> GND
+</pre>
+
+<pre>
+int trig = 9;
+int echo = 10;
+
+void setup(){
+ pinMode(trig, OUTPUT);
+ pinMode(echo, INPUT);
+ Serial.begin(9600);
+}
+void loop(){
+ digitalWrite(trig, LOW); delayMicroseconds(2);
+ digitalWrite(trig, HIGH); delayMicroseconds(10);
+ digitalWrite(trig, LOW);
+
+ long duration = pulseIn(echo, HIGH);
+ int distance = duration * 0.034 / 2;
+ Serial.println(distance);
+ delay(500);
+}
+</pre>
+</details>
+
+<!-- PROJECT 7 -->
+<details>
+<summary>Project 7: IR Sensor LED Control</summary>
+<p><b>Components:</b> Arduino, IR Sensor, LED</p>
+
+<pre>
+IR OUT -> Pin 7
+IR VCC -> 5V
+IR GND -> GND
+
+LED -> Pin 13 -> 220Ω -> GND
+</pre>
+
+<pre>
+int ir = 7;
+int led = 13;
+
+void setup(){
+ pinMode(ir, INPUT);
+ pinMode(led, OUTPUT);
+}
+void loop(){
+ if(digitalRead(ir) == LOW){
+  digitalWrite(led, HIGH);
+ }else{
+  digitalWrite(led, LOW);
+ }
+}
+</pre>
+</details>
+
+<!-- PROJECT 8 -->
+<details>
+<summary>Project 8: LDR Light Sensor</summary>
+<p><b>Components:</b> Arduino, LDR, 10kΩ Resistor</p>
+
+<pre>
+5V -> LDR -> A0 -> 10kΩ -> GND
+</pre>
+
+<pre>
+int ldr = A0;
+
+void setup(){
+ Serial.begin(9600);
+}
+void loop(){
+ int value = analogRead(ldr);
+ Serial.println(value);
+ delay(500);
+}
+</pre>
+</details>
+
+<!-- PROJECT 9 -->
+<details>
+<summary>Project 9: DC Motor Using L298N</summary>
+<p><b>Components:</b> Arduino, L298N, DC Motor</p>
+
+<pre>
+IN1 -> Pin 8
+IN2 -> Pin 9
+ENA -> Pin 10
+Motor -> L298N Output
+</pre>
+
+<pre>
+int in1=8,in2=9,en=10;
+void setup(){
+ pinMode(in1,OUTPUT);
+ pinMode(in2,OUTPUT);
+ pinMode(en,OUTPUT);
+}
+void loop(){
+ digitalWrite(in1,HIGH);
+ digitalWrite(in2,LOW);
+ analogWrite(en,200);
+ delay(3000);
+}
+</pre>
+</details>
+
+<!-- PROJECT 10 -->
+<details>
+<summary>Project 10: Obstacle Avoiding Robot (Basic Logic)</summary>
+<p><b>Components:</b> Arduino, Ultrasonic Sensor, L298N, Motors</p>
+
+<pre>
+Ultrasonic:
+Trig -> 9
+Echo -> 10
+
+Motor Driver:
+IN1 -> 2
+IN2 -> 3
+IN3 -> 4
+IN4 -> 5
+</pre>
+
+<pre>
+int trig=9, echo=10;
+int m1=2,m2=3,m3=4,m4=5;
+
+void setup(){
+ pinMode(trig,OUTPUT);
+ pinMode(echo,INPUT);
+ pinMode(m1,OUTPUT);
+ pinMode(m2,OUTPUT);
+ pinMode(m3,OUTPUT);
+ pinMode(m4,OUTPUT);
+}
+
+void loop(){
+ digitalWrite(trig,LOW); delayMicroseconds(2);
+ digitalWrite(trig,HIGH); delayMicroseconds(10);
+ digitalWrite(trig,LOW);
+
+ long d=pulseIn(echo,HIGH)*0.034/2;
+
+ if(d<20){
+  digitalWrite(m1,LOW);
+  digitalWrite(m2,LOW);
+  digitalWrite(m3,LOW);
+  digitalWrite(m4,LOW);
+ }else{
+  digitalWrite(m1,HIGH);
+  digitalWrite(m2,LOW);
+  digitalWrite(m3,HIGH);
+  digitalWrite(m4,LOW);
+ }
+}
+</pre>
+</details>
+
+</section>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Robotics AI Assistant</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background:#0f172a;
+}
+
+/* CHATBOT CONTAINER */
+#chatbot{
+    position:fixed;
+    bottom:20px;
+    left:20px;
+    width:360px;      /* 🔼 Increased width */
+    height:520px;     /* 🔼 Increased height */
+    background:#020617;
+    border-radius:18px;
+    box-shadow:0 0 25px rgba(56,189,248,0.6);
+    display:flex;
+    flex-direction:column;
+    overflow:hidden;
+    z-index:9999;
+}
+
+/* HEADER */
+#chatbot-header{
+    background:#06b6d4;
+    padding:18px;
+    text-align:center;
+    font-size:20px;   /* 🔼 Bigger text */
+    font-weight:bold;
+    color:#020617;
+}
+
+/* MESSAGES */
+#chatbot-messages{
+    flex:1;
+    padding:15px;
+    overflow-y:auto;
+    font-size:15px;   /* 🔼 Bigger message text */
+}
+
+/* MESSAGE STYLES */
+.msg{
+    margin-bottom:10px;
+    padding:12px;
+    border-radius:12px;
+    max-width:85%;
+}
+.bot{
+    background:#1e293b;
+    color:#e5e7eb;
+}
+.user{
+    background:#2563eb;
+    color:white;
+    margin-left:auto;
+}
+
+/* INPUT AREA */
+#chatbot-input{
+    display:flex;
+    border-top:1px solid #334155;
+}
+#chatbot-input input{
+    flex:1;
+    padding:14px;
+    font-size:15px;  /* 🔼 Bigger input text */
+    border:none;
+    outline:none;
+}
+#chatbot-input button{
+    padding:14px 18px;
+    background:#06b6d4;
+    border:none;
+    cursor:pointer;
+    font-weight:bold;
+    font-size:15px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- CHATBOT -->
+<div id="chatbot">
+    <div id="chatbot-header">🤖 Robotics AI Assistant</div>
+
+    <div id="chatbot-messages"></div>
+
+    <div id="chatbot-input">
+        <input type="text" id="userInput" placeholder="Ask about Robotics, Lessons, Projects...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+</div>
+
+<script>
+const messages = document.getElementById("chatbot-messages");
+
+function addMessage(text, type){
+    const div = document.createElement("div");
+    div.className = "msg " + type;
+    div.innerText = text;
+    messages.appendChild(div);
+    messages.scrollTop = messages.scrollHeight;
+}
+
+/* AI LOGIC */
+function botReply(userText){
+    const text = userText.toLowerCase();
+
+    // Block sexual content
+    const banned = ["sex","porn","nude","xxx","kiss"];
+    for(let w of banned){
+        if(text.includes(w)){
+            return "❌ I cannot answer sexual or adult content.";
+        }
+    }
+
+    // Creator question
+    if(text.includes("who made you") || text.includes("who created you")){
+        return "I MADE BY DISAS. HE IS LIVE IN SRILANKA.";
+    }
+
+    // Lessons
+    if(text.includes("lesson")){
+        return "📘 Robotics Lessons:\n1. Introduction to Robotics\n2. Types of Robots\n3. Robot Components\n4. Arduino Basics\n5. Programming Basics\n6. Digital & Analog Signals\n7. Sensors\n8. Motors\n9. Power Systems\n10. Communication\n11. Line Following\n12. Obstacle Avoiding\n13. Robotic Arms\n14. AI in Robotics\n15. Future of Robotics";
+    }
+
+    // Projects
+    if(text.includes("project")){
+        return "🛠 Arduino Projects:\nLED Blinking\nTraffic Light\nPush Button LED\nBuzzer Alarm\nServo Control\nUltrasonic Sensor\nIR Sensor\nDC Motor\nObstacle Avoiding Robot\nMore coming soon!";
+    }
+
+    // Robotics
+    if(text.includes("robot")){
+        return "🤖 Robotics is a field of engineering and science focused on building intelligent machines that can assist humans.";
+    }
+
+    return "Ask me about Robotics Lessons, Arduino Projects or Learning Guidance 😊";
+}
+
+/* SEND MESSAGE */
+function sendMessage(){
+    const input = document.getElementById("userInput");
+    const text = input.value.trim();
+    if(text === "") return;
+
+    addMessage(text, "user");
+    input.value = "";
+
+    setTimeout(()=>{
+        const reply = botReply(text);
+        addMessage(reply, "bot");
+    },500);
+}
+
+/* Welcome Message */
+addMessage("Hello 👋 I am your Robotics AI Assistant. Ask me about lessons, projects or robotics!", "bot");
+</script>
+
+</body>
+</html>
